@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block title %}Candidates Tasks{% endblock %}
+
+{% block content %}
+  <h1>Candidate List</h1>
+  <p>You have <strong>{{ candidates.length }}</strong> candidates Items!</p>
+  <p><a href="/candidate/new">Create a candidate</a></p>
+  <ul id="candidates">
+    {% for candidate in candidates %}
+      <li>
+        <strong>{{ candidate.name }}</strong> ||
+        <a href="/candidate/{{ candidate._id.toString() }}">Show</a> ||
+        <a href="/candidate/edit/{{ candidate._id.toString() }}">Edit</a> ||
+        <a href="/candidate/delete/{{ candidate._id.toString() }}">Delete</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

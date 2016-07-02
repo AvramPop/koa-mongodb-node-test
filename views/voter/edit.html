@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block title %}Voters{% endblock %}
+
+{% block content %}
+  <h1>Edit Voters data</h1>
+  <form action="/voter/update" method="post">
+    <p><input type="hidden" value="{{ voter._id.toString() }}" name="id"></p>
+    <p><input type="boolean" value="{{ voter.voterIsValid }}" name="voterIsValid"></p>
+    <p><input type="boolean" value="{{ voter.voterHasVoted }}" name="voterHasVoted"></p>
+
+    <p><input type="hidden" value="{{ voter.created_on.toString() }}" name="created_on"></p>
+    <p><input type="submit" value="Update"></p>
+  </form>
+{% endblock %}

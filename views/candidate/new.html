@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block title %}Candidate Tasks{% endblock %}
+
+{% block content %}
+  <h1>Add candidate Item</h1>
+  <p>Create a new candidate item</p>
+  <form action="/candidate/create" method="post">
+    <p><input type="text" placeholder="name" name="name"></p>
+    <p><input type="text" placeholder="surname" name="surname"></p>
+    <p><input type="boolean" placeholder="canVote" name="canVote"></p>
+    <p><input type="text" placeholder="uniqueIdentifier" name="uniqueIdentifier"></p>
+    <p><input type="text" placeholder="gender" name="gender"></p>
+    <p><input type="date" placeholder="dateOfBirth" name="dateOfBirth"></p>
+    <p><input type="text" placeholder="livingArea" name="livingArea"></p>
+    <p><input type="number" placeholder="numberOfVotes" name="numberOfVotes"></p>
+
+    <p><input type="submit" value="Create"></p>
+
+  </form>
+{% endblock %}

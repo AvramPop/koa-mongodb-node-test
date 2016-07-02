@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block title %}Voter Tasks{% endblock %}
+
+{% block content %}
+  <h1>Add Voter Item</h1>
+  <p>Create a new Voter item</p>
+  <form action="/voter/create" method="post">
+    <p><input type="boolean" placeholder="voterIsValid" name="voterIsValid"></p>
+    <p><input type="boolean" placeholder="voterHasVoted" name="voterHasVoted"></p>
+    <p><input type="submit" value="Create"></p>
+  </form>
+{% endblock %}
