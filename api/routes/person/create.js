@@ -11,11 +11,11 @@ module.exports = function *() {
 
   if(this.request.gender != null){
     var gender = this.request.gender;
-  } else console.log('Person ' + name + 'dowsent have a gender!');
+  } else console.log('Person ' + name + 'doesent have a gender!');
 
   if(this.request.livingArea != null){
     var livingArea = this.request.livingArea;
-  } else console.log('Person ' + name + 'dowsent have a livingArea!');
+  } else console.log('Person ' + name + ' doesent have a livingArea!');
 
   // Get current date
   var creationDate = new Date();

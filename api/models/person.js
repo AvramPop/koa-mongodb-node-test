@@ -36,4 +36,4 @@ var schema = new db.Schema(
 
 
 // Return model with schema linked to collection
-module.exports = db.model( 'tests', schema );
+module.exports = db.model( 'Person', schema );

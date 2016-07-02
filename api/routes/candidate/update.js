@@ -12,5 +12,5 @@ module.exports = function *() {
     updated_on: new Date()});
 
   // Redirect to index
-  this.redirect('/');
+  this.redirect('/candidate');
 };

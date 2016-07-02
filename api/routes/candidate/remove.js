@@ -6,5 +6,5 @@ module.exports = function *(id) {
   yield Candidate.remove({"_id": id});
 
   // Redirect to index
-  this.redirect('/');
+  this.redirect('/candidate');
 };

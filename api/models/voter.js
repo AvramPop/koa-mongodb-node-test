@@ -2,8 +2,11 @@
 var db = require('../lib/db');
 
 // Prepare schema
-var schema = new db.Schema(
-{
+var schema = new db.Schema({
+  personId: {
+    type:mongoose.Schema.Types.ObjectId,
+    ref:'Person'
+  },
   voterHasVoted: {
     type: Boolean,
     required: true
@@ -15,7 +18,5 @@ var schema = new db.Schema(
 
 } );
 
-
-
 // Return model with schema linked to collection
-module.exports = db.model( 'tests', schema );
+module.exports = db.model( 'Voter', schema );
