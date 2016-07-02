@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block title %}Candidates{% endblock %}
+
+{% block content %}
+  <h1>Edit Candidates data</h1>
+  <form action="/candidate/update" method="post">
+    <p><input type="hidden" value="{{ candidate._id.toString() }}" name="id"></p>
+    <p><input type="text" value="{{ candidate.name }}" name="name"></p>
+    <p><input type="text" value="{{ candidate.surname }}" name="surname"></p>
+    <p><input type="boolean" value="{{ candidate.canVote }}" name="canVote"></p>
+    <p><input type="text" value="{{ candidate.uniqueIdentifier }}" name="uniqueIdentifier"></p>
+    <p><input type="text" value="{{ candidate.gender }}" name="gender"></p>
+    <p><input type="date" value="{{ candidate.dateOfBirth }}" name="dateOfBirth"></p>
+    <p><input type="text" value="{{ candidate.livingArea }}" name="livingArea"></p>
+    <p><input type="number" value="{{ candidate.numberOfVotes }}" name="numberOfVotes"></p>
+
+    <p><input type="hidden" value="{{ candidate.created_on.toString() }}" name="created_on"></p>
+    <p><input type="submit" value="Update"></p>
+  </form>
+{% endblock %}
