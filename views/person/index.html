@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block title %}Person Tasks{% endblock %}
+
+{% block content %}
+  <h1>Person List</h1>
+  <p>You have <strong>{{ perons.length }}</strong> Person Items!</p>
+  <p><a href="/person/new">Create a Person</a></p>
+  <ul id="persons">
+    {% for person in persons %}
+      <li>
+        <strong>{{ person.name }}</strong> ||
+        <a href="/person/{{ person._id.toString() }}">Show</a> ||
+        <a href="/person/edit/{{ todo._id.toString() }}">Edit</a> ||
+        <a href="/person/delete/{{ todo._id.toString() }}">Delete</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

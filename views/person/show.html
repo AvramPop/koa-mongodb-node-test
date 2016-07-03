@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ person.name }}{% endblock %}
+
+{% block content %}
+  <h1>{{ person.name }}</h1>
+  <p>{{ person.description }}</p>
+  <p><em>Created On: </i> {{ person.created_on.toDateString() }}</p>
+  <p><i>Last Updated On: </i> {{ person.updated_on.toDateString() }}</p>
+  <p><a href="/">Back to List</a></p>
+{% endblock %}

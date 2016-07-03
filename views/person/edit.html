@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block title %}Persons{% endblock %}
+
+{% block content %}
+  <h1>Edit Persons data</h1>
+  <form action="/person/update" method="post">
+    <p><input type="hidden" value="{{ person._id.toString() }}" name="id"></p>
+    <p><input type="text" value="{{ person.name }}" name="name"></p>
+    <p><input type="text" value="{{ person.surname }}" name="surname"></p>
+    <p><input type="text" value="{{ person.name }}" name="name"></p>
+    <p><input type="boolean" value="{{ person.canVote }}" name="canVote"></p>
+    <p><input type="text" value="{{ person.uniqueIdentifier }}" name="uniqueIdentifier"></p>
+    <p><input type="text" value="{{ person.gender }}" name="gender"></p>
+    <p><input type="date" value="{{ person.dateOfBirth }}" name="dateOfBirth"></p>
+    <p><input type="text" value="{{ person.livingArea }}" name="livingArea"></p>
+
+    <p><input type="hidden" value="{{ person.created_on.toString() }}" name="created_on"></p>
+    <p><input type="submit" value="Update"></p>
+  </form>
+{% endblock %}
