@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block title %}Todo Tasks{% endblock %}
+
+{% block content %}
+  <h1>Add Todo Item</h1>
+  <p>Create a new Todo item</p>
+  <form action="/todo/create" method="post">
+    <p><input type="text" placeholder="name" name="name"></p>
+    <p><input type="text" placeholder="surname" name="surname"></p>
+    <p><input type="boolean" placeholder="canVote" name="canVote"></p>
+    <p><input type="text" placeholder="uniqueIdentifier" name="uniqueIdentifier"></p>
+    <p><input type="text" placeholder="gender" name="gender"></p>
+    <p><input type="date" placeholder="dateOfBirth" name="dateOfBirth"></p>
+    <p><input type="text" placeholder="livingArea" name="livingArea"></p>
+    
+    <p><input type="submit" value="Create"></p>
+  </form>
+{% endblock %}
