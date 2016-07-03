@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ voter.name }}{% endblock %}
+
+{% block content %}
+  <h1>{{ voter.voterIsValid }}</h1>
+  <p>{{ voter.voterHasVoted }}</p>
+  <p><em>Created On: </i> {{ voter.created_on.toDateString() }}</p>
+  <p><i>Last Updated On: </i> {{ voter.updated_on.toDateString() }}</p>
+  <p><a href="/">Back to List</a></p>
+{% endblock %}

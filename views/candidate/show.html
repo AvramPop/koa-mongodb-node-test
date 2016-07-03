@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ candidate.name }}{% endblock %}
+
+{% block content %}
+  <h1>{{ candidate.name }}</h1>
+  <p>{{ candidate.description }}</p>
+  <p><em>Created On: </i> {{ candidate.created_on.toDateString() }}</p>
+  <p><i>Last Updated On: </i> {{ candidate.updated_on.toDateString() }}</p>
+  <p><a href="/">Back to List</a></p>
+{% endblock %}
